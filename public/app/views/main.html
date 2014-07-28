@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-2" ng-repeat="book in books">
+	    <div class="book" ng-click="openDetails(book)">
+        <br><br><br>
+        <div class="col-md-10 col-md-offset-1">
+  	      <h6>{{book.title}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse down" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Editorial</a>
+  </div>
+  <div class="navbar-form navbar-right" role="search">
+    <input type="button" class="btn btn-default" ng-click="openNewBook()" value="Agregar Libro"/>
+  </div>
+</nav>

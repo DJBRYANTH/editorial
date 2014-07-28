@@ -1,0 +1,61 @@
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      Title : <input class="form-control" ng-model="book.title"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="panel panel-default">
+
+        <div class="panel-heading">
+          <h3 class="panel-title">Tabla de Contenidos</h3>
+        </div>
+
+        <div class="panel-body">
+          <div class="col-md-5">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" ng-click="addContent()">
+                <span class="">Agregar Contenido</span>
+              </button>
+            </div>
+          </div>  
+          <br><br>
+          <div class="row nopadding col-md-offset-2" ng-repeat="(key, value) in tableContent">
+            <div class="col-md-5">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default btn-sm" ng-click="addLevel(key)">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" ng-click="downLevel(key)">
+                  <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" ng-click="leftLevel(key)">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" ng-click="rightLevel(key)">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+              </div>  
+            </div>          
+            <div class="col-md-6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon">{{value.numeration}}</span>
+                <input type="text" class="form-control" placeholder="Content"
+                ng-model="value.content" ng-click="setNumeration(value.numeration, key)">
+              </div>
+            </div>
+          </div>  
+
+        </div>
+
+      </div>
+      
+    </div> 
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="guardar()">Guardar</button>
+  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,60 @@
+<div class="modal-body">
+ <div class="fondo">
+    <div id="bb-bookblock" class="bb-bookblock" flipper>
+      <div class="bb-item">
+          <br>
+          <div class="col-md-offset-2">Tabla de contenido</div>
+          <br>
+          <div class="row" ng-repeat="content in tableContent[0]">
+            <div class="col-md-1 margenes">
+            {{content.numeration}}
+            </div>
+            <div class="col-md-6">
+            {{content.content}}
+            </div>
+          </div>
+      </div>
+      <div class="bb-item">
+          <!-- ... -->
+      </div>
+      <div class="bb-ite">
+          <!-- ... -->
+      </div>
+      <div class="bb-item">
+          <!-- ... -->
+      </div>
+    </div>  
+
+
+  </div>
+
+
+</div>
+<div class="modal-footer">
+     <div class="row">
+      <div class="centrado">
+        <nav>
+          <a id="bb-nav-first" href="#">
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-step-backward blancos"></span>
+            </button>
+          </a>
+          <a id="bb-nav-prev" href="#" class="">
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-chevron-left blancos"></span>
+            </button>
+          </a>
+          <a id="bb-nav-next" href="#" class="">
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-chevron-right blancos"></span>
+            </button>
+          </a>
+          <a id="bb-nav-last" href="#" class="">
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-step-forward blancos"></span>
+            </button>
+          </a>
+        </nav>
+      </div>
+    </div> 
+</div>
